@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioDown = new System.Windows.Forms.RadioButton();
             this.radioUp = new System.Windows.Forms.RadioButton();
@@ -43,20 +44,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioDown);
-            this.groupBox1.Controls.Add(this.radioUp);
             this.groupBox1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox1.Location = new System.Drawing.Point(14, 24);
+            this.groupBox1.Location = new System.Drawing.Point(12, 23);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(423, 78);
+            this.groupBox1.Size = new System.Drawing.Size(425, 78);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "按键测试区";
@@ -65,12 +63,11 @@
             // 
             this.radioDown.AutoSize = true;
             this.radioDown.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.radioDown.Location = new System.Drawing.Point(270, 28);
+            this.radioDown.Location = new System.Drawing.Point(261, 54);
             this.radioDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioDown.Name = "radioDown";
             this.radioDown.Size = new System.Drawing.Size(62, 21);
-            this.radioDown.TabIndex = 1;
-            this.radioDown.TabStop = true;
+            this.radioDown.TabIndex = 3;
             this.radioDown.Text = "下翻页";
             this.radioDown.UseVisualStyleBackColor = true;
             // 
@@ -78,12 +75,11 @@
             // 
             this.radioUp.AutoSize = true;
             this.radioUp.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.radioUp.Location = new System.Drawing.Point(55, 28);
+            this.radioUp.Location = new System.Drawing.Point(84, 54);
             this.radioUp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioUp.Name = "radioUp";
             this.radioUp.Size = new System.Drawing.Size(62, 21);
-            this.radioUp.TabIndex = 1;
-            this.radioUp.TabStop = true;
+            this.radioUp.TabIndex = 2;
             this.radioUp.Text = "上翻页";
             this.radioUp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioUp.UseVisualStyleBackColor = true;
@@ -101,22 +97,23 @@
             // Btn_CodeMacth
             // 
             this.Btn_CodeMacth.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Btn_CodeMacth.Location = new System.Drawing.Point(95, 117);
+            this.Btn_CodeMacth.Location = new System.Drawing.Point(101, 115);
             this.Btn_CodeMacth.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Btn_CodeMacth.Name = "Btn_CodeMacth";
             this.Btn_CodeMacth.Size = new System.Drawing.Size(87, 33);
             this.Btn_CodeMacth.TabIndex = 1;
             this.Btn_CodeMacth.Text = "对码";
             this.Btn_CodeMacth.UseVisualStyleBackColor = true;
+            this.Btn_CodeMacth.Click += new System.EventHandler(this.Btn_CodeMacth_Click);
             // 
             // Btn_Exits
             // 
             this.Btn_Exits.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Btn_Exits.Location = new System.Drawing.Point(236, 117);
+            this.Btn_Exits.Location = new System.Drawing.Point(257, 115);
             this.Btn_Exits.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Btn_Exits.Name = "Btn_Exits";
             this.Btn_Exits.Size = new System.Drawing.Size(87, 33);
-            this.Btn_Exits.TabIndex = 1;
+            this.Btn_Exits.TabIndex = 4;
             this.Btn_Exits.Text = "退出";
             this.Btn_Exits.UseVisualStyleBackColor = true;
             this.Btn_Exits.Click += new System.EventHandler(this.Btn_Exits_Click);
@@ -130,7 +127,7 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(14, 168);
+            this.groupBox2.Location = new System.Drawing.Point(14, 160);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -142,7 +139,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label9.Location = new System.Drawing.Point(37, 204);
+            this.label9.Location = new System.Drawing.Point(37, 201);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(351, 17);
             this.label9.TabIndex = 0;
@@ -152,7 +149,7 @@
             // 
             this.labdot5.AutoSize = true;
             this.labdot5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labdot5.Location = new System.Drawing.Point(42, 165);
+            this.labdot5.Location = new System.Drawing.Point(42, 161);
             this.labdot5.Name = "labdot5";
             this.labdot5.Size = new System.Drawing.Size(53, 17);
             this.labdot5.TabIndex = 0;
@@ -162,7 +159,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.Location = new System.Drawing.Point(42, 139);
+            this.label7.Location = new System.Drawing.Point(42, 134);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(303, 17);
             this.label7.TabIndex = 0;
@@ -172,7 +169,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(42, 111);
+            this.label6.Location = new System.Drawing.Point(42, 106);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(267, 17);
             this.label6.TabIndex = 0;
@@ -182,7 +179,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(43, 83);
+            this.label5.Location = new System.Drawing.Point(43, 78);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(183, 17);
             this.label5.TabIndex = 0;
@@ -192,7 +189,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(43, 57);
+            this.label4.Location = new System.Drawing.Point(43, 51);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(183, 17);
             this.label4.TabIndex = 0;
@@ -202,7 +199,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label2.Location = new System.Drawing.Point(32, 404);
+            this.label2.Location = new System.Drawing.Point(32, 400);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(379, 17);
             this.label2.TabIndex = 3;
@@ -212,7 +209,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label3.Location = new System.Drawing.Point(163, 429);
+            this.label3.Location = new System.Drawing.Point(163, 418);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 17);
             this.label3.TabIndex = 1;
@@ -222,14 +219,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(454, 458);
+            this.ClientSize = new System.Drawing.Size(447, 440);
+            this.Controls.Add(this.radioDown);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.radioUp);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.Btn_Exits);
             this.Controls.Add(this.Btn_CodeMacth);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -237,8 +238,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Knorvay诺为 翻页激光笔对码软件 V1.1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
