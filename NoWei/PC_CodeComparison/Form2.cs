@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace PC_CodeComparison
 {
-    public partial class Form1 : Form
+    public partial class Form2 : Form
     {
         private TextBox[] TextKeys;
-        private int[] TextKeyCodes = new[] { 33, 34, 9, 13, 116, 190 };
+        private int[] TextKeyCodes = new[] {33, 34, 9, 13, 116, 190};
 
         [StructLayout(LayoutKind.Sequential)]
         public class KeyBoardHookStruct
@@ -84,12 +84,12 @@ namespace PC_CodeComparison
         [DllImport("user32", EntryPoint = "GetKeyNameText")]
         private static extern int GetKeyNameText(int lParam, StringBuilder lpBuffer, int nSize);
 
-        public Form1()
+        public Form2()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form2_Load(object sender, EventArgs e)
         {
             TextKeys = new[] { Text_Key1, Text_Key2, Text_Key3, Text_Key4, Text_Key5, Text_Key6 };
             Hook_Start();
@@ -123,7 +123,7 @@ namespace PC_CodeComparison
 
         private int KeyBoardHookProc(int nCode, int wParam, IntPtr lParam)
         {
-            bool Key_Down_Flag = false;
+            bool Key_Down_Flag=false;
             var keyName = string.Empty;
             int sKey = 0;
             if (nCode >= 0)
@@ -132,7 +132,7 @@ namespace PC_CodeComparison
                     Key_Down_Flag = true;
                 else
                     Key_Down_Flag = false;
-
+                
                 KeyBoardHookStruct kbh = (KeyBoardHookStruct)Marshal.PtrToStructure(lParam, typeof(KeyBoardHookStruct));
 
                 StringBuilder strKeyName = new StringBuilder(250);
@@ -151,7 +151,7 @@ namespace PC_CodeComparison
                         keyName = "Down";
                 }
                 Keys k = (Keys)Enum.Parse(typeof(Keys), kbh.vkCode.ToString());
-
+                
                 if (kbh.vkCode == (int)Keys.P || kbh.vkCode == (int)Keys.T)
                 {
                     Mask_Input_Display = true;
@@ -221,20 +221,20 @@ namespace PC_CodeComparison
                             }
                         }
                         // ESC for stop F5, share same button
-                        if (kbh.vkCode == (int)Keys.Escape)
+                        if (kbh.vkCode == (int) Keys.Escape)
                             TextKeys[4].Text = "ESC";
                         // Shift + F5
-                        if (kbh.vkCode == (int)Keys.F5 && Shift_Press_Flag && Key_Down_Flag)
-                            TextKeys[4].Text = "Shift F5";
+                        if (kbh.vkCode == (int) Keys.F5 && Shift_Press_Flag && Key_Down_Flag) 
+                             TextKeys[4].Text = "Shift F5";
                         // Alt + Tab
-                        if (kbh.vkCode == (int)Keys.Tab && Alt_Press_Flag && Key_Down_Flag)
+                        if (kbh.vkCode == (int) Keys.Tab && Alt_Press_Flag && Key_Down_Flag)
                             TextKeys[2].Text = "Alt Tab";
                     }
 
                 }
             }
             return 1;
-           // return CallNextHookEx(hHook, nCode, wParam, lParam);
+            //return CallNextHookEx(hHook, nCode, wParam, lParam);
         }
 
         private void Btn_Clear_Click(object sender, EventArgs e)
@@ -288,6 +288,7 @@ namespace PC_CodeComparison
             if (GetKeyState(145) == 1)
             {
                 Press_Scroll_Lock();
+
             }
 
             if (GetKeyState(20) == 1)
@@ -321,7 +322,7 @@ namespace PC_CodeComparison
             Press_Caps_Lock();
             Press_Scroll_Lock();
             Press_Num_Lock();
-
+            
 
             // ' 安装钩子
             Hook_Start();
@@ -339,7 +340,7 @@ namespace PC_CodeComparison
 
             if (GetKeyState(144) == 1)
                 Press_Num_Lock();
-
+            
             Sleep(10);
 
             // 2, turn on SCROLL LOCK, NUM LOCK

@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.OptListBox = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Text_Key3 = new System.Windows.Forms.TextBox();
-            this.Text_Key1 = new System.Windows.Forms.TextBox();
-            this.Text_Key4 = new System.Windows.Forms.TextBox();
-            this.Text_Key2 = new System.Windows.Forms.TextBox();
-            this.Text_Key5 = new System.Windows.Forms.TextBox();
             this.Text_Key6 = new System.Windows.Forms.TextBox();
+            this.Text_Key5 = new System.Windows.Forms.TextBox();
+            this.Text_Key2 = new System.Windows.Forms.TextBox();
+            this.Text_Key4 = new System.Windows.Forms.TextBox();
+            this.Text_Key1 = new System.Windows.Forms.TextBox();
+            this.Text_Key3 = new System.Windows.Forms.TextBox();
             this.Text_Fs = new System.Windows.Forms.TextBox();
             this.Text_Js = new System.Windows.Forms.TextBox();
             this.Text_Dy = new System.Windows.Forms.TextBox();
@@ -76,60 +77,23 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
-            // Text_Key3
+            // Text_Key6
             // 
-            this.Text_Key3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Text_Key3.Enabled = false;
-            this.Text_Key3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Text_Key3.Location = new System.Drawing.Point(108, 47);
-            this.Text_Key3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Text_Key3.Name = "Text_Key3";
-            this.Text_Key3.Size = new System.Drawing.Size(116, 23);
-            this.Text_Key3.TabIndex = 0;
-            this.Text_Key3.Text = "按键3";
-            this.Text_Key3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Text_Key1
-            // 
-            this.Text_Key1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Text_Key1.Enabled = false;
-            this.Text_Key1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Text_Key1.Location = new System.Drawing.Point(20, 115);
-            this.Text_Key1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Text_Key1.Name = "Text_Key1";
-            this.Text_Key1.Size = new System.Drawing.Size(110, 23);
-            this.Text_Key1.TabIndex = 0;
-            this.Text_Key1.Text = "按键1";
-            this.Text_Key1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Text_Key4
-            // 
-            this.Text_Key4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Text_Key4.Enabled = false;
-            this.Text_Key4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Text_Key4.Location = new System.Drawing.Point(108, 181);
-            this.Text_Key4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Text_Key4.Name = "Text_Key4";
-            this.Text_Key4.Size = new System.Drawing.Size(116, 23);
-            this.Text_Key4.TabIndex = 0;
-            this.Text_Key4.Text = "按键4";
-            this.Text_Key4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Text_Key2
-            // 
-            this.Text_Key2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Text_Key2.Enabled = false;
-            this.Text_Key2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Text_Key2.Location = new System.Drawing.Point(174, 115);
-            this.Text_Key2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Text_Key2.Name = "Text_Key2";
-            this.Text_Key2.Size = new System.Drawing.Size(116, 23);
-            this.Text_Key2.TabIndex = 0;
-            this.Text_Key2.Text = "按键2";
-            this.Text_Key2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Text_Key6.BackColor = System.Drawing.Color.White;
+            this.Text_Key6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Text_Key6.Enabled = false;
+            this.Text_Key6.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Text_Key6.Location = new System.Drawing.Point(314, 150);
+            this.Text_Key6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Text_Key6.Name = "Text_Key6";
+            this.Text_Key6.Size = new System.Drawing.Size(116, 23);
+            this.Text_Key6.TabIndex = 0;
+            this.Text_Key6.Text = "按键6";
+            this.Text_Key6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Text_Key5
             // 
+            this.Text_Key5.BackColor = System.Drawing.Color.White;
             this.Text_Key5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Text_Key5.Enabled = false;
             this.Text_Key5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -141,18 +105,61 @@
             this.Text_Key5.Text = "按键5";
             this.Text_Key5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Text_Key6
+            // Text_Key2
             // 
-            this.Text_Key6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Text_Key6.Enabled = false;
-            this.Text_Key6.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Text_Key6.Location = new System.Drawing.Point(314, 150);
-            this.Text_Key6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Text_Key6.Name = "Text_Key6";
-            this.Text_Key6.Size = new System.Drawing.Size(116, 23);
-            this.Text_Key6.TabIndex = 0;
-            this.Text_Key6.Text = "按键6";
-            this.Text_Key6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Text_Key2.BackColor = System.Drawing.Color.White;
+            this.Text_Key2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Text_Key2.Enabled = false;
+            this.Text_Key2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Text_Key2.Location = new System.Drawing.Point(174, 115);
+            this.Text_Key2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Text_Key2.Name = "Text_Key2";
+            this.Text_Key2.Size = new System.Drawing.Size(116, 23);
+            this.Text_Key2.TabIndex = 0;
+            this.Text_Key2.Text = "按键2";
+            this.Text_Key2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Text_Key4
+            // 
+            this.Text_Key4.BackColor = System.Drawing.Color.White;
+            this.Text_Key4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Text_Key4.Enabled = false;
+            this.Text_Key4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Text_Key4.Location = new System.Drawing.Point(108, 181);
+            this.Text_Key4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Text_Key4.Name = "Text_Key4";
+            this.Text_Key4.Size = new System.Drawing.Size(116, 23);
+            this.Text_Key4.TabIndex = 0;
+            this.Text_Key4.Text = "按键4";
+            this.Text_Key4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Text_Key1
+            // 
+            this.Text_Key1.BackColor = System.Drawing.Color.White;
+            this.Text_Key1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Text_Key1.Enabled = false;
+            this.Text_Key1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Text_Key1.Location = new System.Drawing.Point(20, 115);
+            this.Text_Key1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Text_Key1.Name = "Text_Key1";
+            this.Text_Key1.Size = new System.Drawing.Size(110, 23);
+            this.Text_Key1.TabIndex = 0;
+            this.Text_Key1.Text = "按键1";
+            this.Text_Key1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Text_Key3
+            // 
+            this.Text_Key3.BackColor = System.Drawing.Color.White;
+            this.Text_Key3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Text_Key3.Enabled = false;
+            this.Text_Key3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Text_Key3.Location = new System.Drawing.Point(108, 47);
+            this.Text_Key3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Text_Key3.Name = "Text_Key3";
+            this.Text_Key3.Size = new System.Drawing.Size(116, 23);
+            this.Text_Key3.TabIndex = 0;
+            this.Text_Key3.Text = "按键3";
+            this.Text_Key3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Text_Fs
             // 
@@ -266,11 +273,12 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.OptListBox);
             this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PC端对码";
+            this.Text = "N33 对码检测软件 V1.0";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -106,9 +106,6 @@ namespace CodeComparison
         [DllImport("kernel32.dll")]
         static extern void Sleep(uint msec);
 
-        //bool CapsLock = (((ushort)GetKeyState(0x14)) & 0xffff) != 0;
-        //bool NumLock = (((ushort)GetKeyState(0x90)) & 0xffff) != 0;
-        //bool ScrollLock = (((ushort)GetKeyState(0x91)) & 0xffff) != 0;
 
         private void Btn_CodeMacth_Click(object sender, EventArgs e)
         {

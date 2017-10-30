@@ -86,7 +86,11 @@ Public Function CallKeyHookProc(ByVal nCode As Long, ByVal wParam As Long, ByVal
         End If
         
         ' get key scan code for key name
+
+        Dim sKey As Long
+
         sKey = keyMsg.sKey And &HFF
+
         sKey = sKey * 65536
         
         ' get key name
