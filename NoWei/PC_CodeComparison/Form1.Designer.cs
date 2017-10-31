@@ -55,7 +55,7 @@
             this.OptListBox.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.OptListBox.FormattingEnabled = true;
             this.OptListBox.ItemHeight = 17;
-            this.OptListBox.Location = new System.Drawing.Point(495, 33);
+            this.OptListBox.Location = new System.Drawing.Point(495, 29);
             this.OptListBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OptListBox.Name = "OptListBox";
             this.OptListBox.Size = new System.Drawing.Size(377, 395);
@@ -73,14 +73,13 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(460, 249);
+            this.groupBox1.Size = new System.Drawing.Size(460, 245);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
             // Text_Key6
             // 
             this.Text_Key6.BackColor = System.Drawing.Color.White;
-            this.Text_Key6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Text_Key6.Enabled = false;
             this.Text_Key6.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Text_Key6.Location = new System.Drawing.Point(314, 150);
@@ -94,7 +93,6 @@
             // Text_Key5
             // 
             this.Text_Key5.BackColor = System.Drawing.Color.White;
-            this.Text_Key5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Text_Key5.Enabled = false;
             this.Text_Key5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Text_Key5.Location = new System.Drawing.Point(314, 74);
@@ -108,7 +106,6 @@
             // Text_Key2
             // 
             this.Text_Key2.BackColor = System.Drawing.Color.White;
-            this.Text_Key2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Text_Key2.Enabled = false;
             this.Text_Key2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Text_Key2.Location = new System.Drawing.Point(174, 115);
@@ -122,10 +119,9 @@
             // Text_Key4
             // 
             this.Text_Key4.BackColor = System.Drawing.Color.White;
-            this.Text_Key4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Text_Key4.Enabled = false;
             this.Text_Key4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Text_Key4.Location = new System.Drawing.Point(108, 181);
+            this.Text_Key4.Location = new System.Drawing.Point(94, 181);
             this.Text_Key4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Text_Key4.Name = "Text_Key4";
             this.Text_Key4.Size = new System.Drawing.Size(116, 23);
@@ -136,7 +132,6 @@
             // Text_Key1
             // 
             this.Text_Key1.BackColor = System.Drawing.Color.White;
-            this.Text_Key1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Text_Key1.Enabled = false;
             this.Text_Key1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Text_Key1.Location = new System.Drawing.Point(20, 115);
@@ -150,10 +145,9 @@
             // Text_Key3
             // 
             this.Text_Key3.BackColor = System.Drawing.Color.White;
-            this.Text_Key3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Text_Key3.Enabled = false;
             this.Text_Key3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Text_Key3.Location = new System.Drawing.Point(108, 47);
+            this.Text_Key3.Location = new System.Drawing.Point(94, 47);
             this.Text_Key3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Text_Key3.Name = "Text_Key3";
             this.Text_Key3.Size = new System.Drawing.Size(116, 23);
@@ -163,7 +157,7 @@
             // 
             // Text_Fs
             // 
-            this.Text_Fs.Location = new System.Drawing.Point(14, 287);
+            this.Text_Fs.Location = new System.Drawing.Point(14, 284);
             this.Text_Fs.Name = "Text_Fs";
             this.Text_Fs.ReadOnly = true;
             this.Text_Fs.Size = new System.Drawing.Size(350, 23);
@@ -171,7 +165,7 @@
             // 
             // Text_Js
             // 
-            this.Text_Js.Location = new System.Drawing.Point(14, 328);
+            this.Text_Js.Location = new System.Drawing.Point(14, 325);
             this.Text_Js.Name = "Text_Js";
             this.Text_Js.ReadOnly = true;
             this.Text_Js.Size = new System.Drawing.Size(350, 23);
@@ -179,17 +173,17 @@
             // 
             // Text_Dy
             // 
-            this.Text_Dy.Location = new System.Drawing.Point(264, 413);
+            this.Text_Dy.Location = new System.Drawing.Point(288, 410);
             this.Text_Dy.Name = "Text_Dy";
             this.Text_Dy.ReadOnly = true;
-            this.Text_Dy.Size = new System.Drawing.Size(100, 23);
+            this.Text_Dy.Size = new System.Drawing.Size(76, 23);
             this.Text_Dy.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(370, 290);
+            this.label1.Location = new System.Drawing.Point(370, 287);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 17);
             this.label1.TabIndex = 3;
@@ -199,7 +193,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(370, 416);
+            this.label2.Location = new System.Drawing.Point(370, 413);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 17);
             this.label2.TabIndex = 3;
@@ -207,9 +201,9 @@
             // 
             // Btn_Clear
             // 
-            this.Btn_Clear.Location = new System.Drawing.Point(12, 365);
+            this.Btn_Clear.Location = new System.Drawing.Point(12, 362);
             this.Btn_Clear.Name = "Btn_Clear";
-            this.Btn_Clear.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Clear.Size = new System.Drawing.Size(75, 26);
             this.Btn_Clear.TabIndex = 4;
             this.Btn_Clear.Text = "清码";
             this.Btn_Clear.UseVisualStyleBackColor = true;
@@ -217,9 +211,9 @@
             // 
             // Btn_ClearScreen
             // 
-            this.Btn_ClearScreen.Location = new System.Drawing.Point(121, 365);
+            this.Btn_ClearScreen.Location = new System.Drawing.Point(121, 362);
             this.Btn_ClearScreen.Name = "Btn_ClearScreen";
-            this.Btn_ClearScreen.Size = new System.Drawing.Size(75, 23);
+            this.Btn_ClearScreen.Size = new System.Drawing.Size(75, 26);
             this.Btn_ClearScreen.TabIndex = 4;
             this.Btn_ClearScreen.Text = "清屏";
             this.Btn_ClearScreen.UseVisualStyleBackColor = true;
@@ -227,9 +221,9 @@
             // 
             // Btn_Exit
             // 
-            this.Btn_Exit.Location = new System.Drawing.Point(121, 412);
+            this.Btn_Exit.Location = new System.Drawing.Point(121, 409);
             this.Btn_Exit.Name = "Btn_Exit";
-            this.Btn_Exit.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Exit.Size = new System.Drawing.Size(75, 26);
             this.Btn_Exit.TabIndex = 4;
             this.Btn_Exit.Text = "结束";
             this.Btn_Exit.UseVisualStyleBackColor = true;
@@ -237,9 +231,9 @@
             // 
             // Btn_Code
             // 
-            this.Btn_Code.Location = new System.Drawing.Point(14, 412);
+            this.Btn_Code.Location = new System.Drawing.Point(14, 409);
             this.Btn_Code.Name = "Btn_Code";
-            this.Btn_Code.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Code.Size = new System.Drawing.Size(75, 26);
             this.Btn_Code.TabIndex = 4;
             this.Btn_Code.Text = "对码";
             this.Btn_Code.UseVisualStyleBackColor = true;
@@ -249,7 +243,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(370, 331);
+            this.label3.Location = new System.Drawing.Point(370, 328);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 17);
             this.label3.TabIndex = 3;
@@ -259,6 +253,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(887, 448);
             this.Controls.Add(this.Btn_Code);
             this.Controls.Add(this.Btn_Exit);

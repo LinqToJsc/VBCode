@@ -134,21 +134,25 @@ namespace PC_CodeComparison
                     Key_Down_Flag = false;
 
                 KeyBoardHookStruct kbh = (KeyBoardHookStruct)Marshal.PtrToStructure(lParam, typeof(KeyBoardHookStruct));
-
-                StringBuilder strKeyName = new StringBuilder(250);
-                if (GetKeyNameText(kbh.scanCode * 65536, strKeyName, 250) > 0)
+                sKey = kbh.scanCode & 0xff;
+                sKey = sKey*65536;
+                StringBuilder strKeyName = new StringBuilder(255);
+                if (GetKeyNameText(sKey, strKeyName, 255) > 0)
                     keyName = strKeyName.ToString().Trim(new char[] { ' ', '\0' });
                 if (keyName.Length > 3 && keyName.Substring(0, 3) == "Num")
                 {
-                    if (kbh.vkCode == 33 || kbh.vkCode == 105)
-                        keyName = "Page Up";
-                    if (kbh.vkCode == 34 || kbh.vkCode == 99)
-                        keyName = "Page Down";
+                    sKey = sKey + 0x1000000;
+                    if (GetKeyNameText(sKey, strKeyName, 255) > 0)
+                        keyName = strKeyName.ToString().Trim(new char[] { ' ', '\0' });
+                    //if (kbh.vkCode == 33 || kbh.vkCode == 105)
+                    //    keyName = "Page Up";
+                    //if (kbh.vkCode == 34 || kbh.vkCode == 99)
+                    //    keyName = "Page Down";
 
-                    if (kbh.vkCode == 38 || kbh.vkCode == 104)
-                        keyName = "Up";
-                    if (kbh.vkCode == 40 || kbh.vkCode == 98)
-                        keyName = "Down";
+                    //if (kbh.vkCode == 38 || kbh.vkCode == 104)
+                    //    keyName = "Up";
+                    //if (kbh.vkCode == 40 || kbh.vkCode == 98)
+                    //    keyName = "Down";
                 }
                 Keys k = (Keys)Enum.Parse(typeof(Keys), kbh.vkCode.ToString());
 

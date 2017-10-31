@@ -63,7 +63,7 @@
             // 
             this.radioDown.AutoSize = true;
             this.radioDown.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.radioDown.Location = new System.Drawing.Point(261, 54);
+            this.radioDown.Location = new System.Drawing.Point(301, 54);
             this.radioDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioDown.Name = "radioDown";
             this.radioDown.Size = new System.Drawing.Size(62, 21);
@@ -75,7 +75,7 @@
             // 
             this.radioUp.AutoSize = true;
             this.radioUp.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.radioUp.Location = new System.Drawing.Point(84, 54);
+            this.radioUp.Location = new System.Drawing.Point(89, 54);
             this.radioUp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioUp.Name = "radioUp";
             this.radioUp.Size = new System.Drawing.Size(62, 21);
@@ -97,7 +97,7 @@
             // Btn_CodeMacth
             // 
             this.Btn_CodeMacth.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Btn_CodeMacth.Location = new System.Drawing.Point(101, 115);
+            this.Btn_CodeMacth.Location = new System.Drawing.Point(113, 115);
             this.Btn_CodeMacth.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Btn_CodeMacth.Name = "Btn_CodeMacth";
             this.Btn_CodeMacth.Size = new System.Drawing.Size(87, 33);
@@ -109,7 +109,7 @@
             // Btn_Exits
             // 
             this.Btn_Exits.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Btn_Exits.Location = new System.Drawing.Point(257, 115);
+            this.Btn_Exits.Location = new System.Drawing.Point(244, 115);
             this.Btn_Exits.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Btn_Exits.Name = "Btn_Exits";
             this.Btn_Exits.Size = new System.Drawing.Size(87, 33);
@@ -219,6 +219,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(447, 440);
             this.Controls.Add(this.radioDown);
             this.Controls.Add(this.label3);
