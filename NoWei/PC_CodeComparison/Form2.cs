@@ -7,7 +7,6 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PC_CodeComparison
@@ -15,7 +14,7 @@ namespace PC_CodeComparison
     public partial class Form2 : Form
     {
         private TextBox[] TextKeys;
-        private int[] TextKeyCodes = new[] {33, 34, 9, 13, 116, 190};
+        private int[] TextKeyCodes = new[] { 33, 34, 9, 13, 116, 190 };
 
         [StructLayout(LayoutKind.Sequential)]
         public class KeyBoardHookStruct
@@ -123,7 +122,7 @@ namespace PC_CodeComparison
 
         private int KeyBoardHookProc(int nCode, int wParam, IntPtr lParam)
         {
-            bool Key_Down_Flag=false;
+            bool Key_Down_Flag = false;
             var keyName = string.Empty;
             int sKey = 0;
             if (nCode >= 0)
@@ -132,26 +131,30 @@ namespace PC_CodeComparison
                     Key_Down_Flag = true;
                 else
                     Key_Down_Flag = false;
-                
-                KeyBoardHookStruct kbh = (KeyBoardHookStruct)Marshal.PtrToStructure(lParam, typeof(KeyBoardHookStruct));
 
-                StringBuilder strKeyName = new StringBuilder(250);
-                if (GetKeyNameText(kbh.scanCode * 65536, strKeyName, 250) > 0)
+                KeyBoardHookStruct kbh = (KeyBoardHookStruct)Marshal.PtrToStructure(lParam, typeof(KeyBoardHookStruct));
+                sKey = kbh.scanCode & 0xff;
+                sKey = sKey * 65536;
+                StringBuilder strKeyName = new StringBuilder(255);
+                if (GetKeyNameText(sKey, strKeyName, 255) > 0)
                     keyName = strKeyName.ToString().Trim(new char[] { ' ', '\0' });
                 if (keyName.Length > 3 && keyName.Substring(0, 3) == "Num")
                 {
-                    if (kbh.vkCode == 33 || kbh.vkCode == 105)
-                        keyName = "Page Up";
-                    if (kbh.vkCode == 34 || kbh.vkCode == 99)
-                        keyName = "Page Down";
+                    sKey = sKey + 0x1000000;
+                    if (GetKeyNameText(sKey, strKeyName, 255) > 0)
+                        keyName = strKeyName.ToString().Trim(new char[] { ' ', '\0' });
+                    //if (kbh.vkCode == 33 || kbh.vkCode == 105)
+                    //    keyName = "Page Up";
+                    //if (kbh.vkCode == 34 || kbh.vkCode == 99)
+                    //    keyName = "Page Down";
 
-                    if (kbh.vkCode == 38 || kbh.vkCode == 104)
-                        keyName = "Up";
-                    if (kbh.vkCode == 40 || kbh.vkCode == 98)
-                        keyName = "Down";
+                    //if (kbh.vkCode == 38 || kbh.vkCode == 104)
+                    //    keyName = "Up";
+                    //if (kbh.vkCode == 40 || kbh.vkCode == 98)
+                    //    keyName = "Down";
                 }
                 Keys k = (Keys)Enum.Parse(typeof(Keys), kbh.vkCode.ToString());
-                
+
                 if (kbh.vkCode == (int)Keys.P || kbh.vkCode == (int)Keys.T)
                 {
                     Mask_Input_Display = true;
@@ -213,21 +216,22 @@ namespace PC_CodeComparison
                         for (int i = 0; i <= 5; i++)
                         {
                             var textKey = TextKeys[i];
-                            textKey.BackColor = Color.White;
+                            textKey.BackColor = SystemColors.Window;
                             if (kbh.vkCode == TextKeyCodes[i])
                             {
+                                
                                 textKey.BackColor = Color.DarkRed;
                                 textKey.Text = keyName;
                             }
                         }
                         // ESC for stop F5, share same button
-                        if (kbh.vkCode == (int) Keys.Escape)
+                        if (kbh.vkCode == (int)Keys.Escape)
                             TextKeys[4].Text = "ESC";
                         // Shift + F5
-                        if (kbh.vkCode == (int) Keys.F5 && Shift_Press_Flag && Key_Down_Flag) 
-                             TextKeys[4].Text = "Shift F5";
+                        if (kbh.vkCode == (int)Keys.F5 && Shift_Press_Flag && Key_Down_Flag)
+                            TextKeys[4].Text = "Shift F5";
                         // Alt + Tab
-                        if (kbh.vkCode == (int) Keys.Tab && Alt_Press_Flag && Key_Down_Flag)
+                        if (kbh.vkCode == (int)Keys.Tab && Alt_Press_Flag && Key_Down_Flag)
                             TextKeys[2].Text = "Alt Tab";
                     }
 
@@ -248,7 +252,6 @@ namespace PC_CodeComparison
         private void Btn_ClearScreen_Click(object sender, EventArgs e)
         {
             cmdClear_Click();
-
         }
 
         private void Btn_Code_Click(object sender, EventArgs e)
@@ -288,7 +291,6 @@ namespace PC_CodeComparison
             if (GetKeyState(145) == 1)
             {
                 Press_Scroll_Lock();
-
             }
 
             if (GetKeyState(20) == 1)
@@ -322,7 +324,7 @@ namespace PC_CodeComparison
             Press_Caps_Lock();
             Press_Scroll_Lock();
             Press_Num_Lock();
-            
+
 
             // ' 安装钩子
             Hook_Start();
@@ -340,7 +342,7 @@ namespace PC_CodeComparison
 
             if (GetKeyState(144) == 1)
                 Press_Num_Lock();
-            
+
             Sleep(10);
 
             // 2, turn on SCROLL LOCK, NUM LOCK

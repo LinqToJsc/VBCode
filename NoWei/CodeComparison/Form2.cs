@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace CodeComparison
 {
-    public partial class Form1 : Form
+    public partial class Form2 : Form
     {
         //按键状态
         const int KEYEVENTF_EXTENDEDKEY = 1;
@@ -21,12 +21,12 @@ namespace CodeComparison
         const int VK_CAPITAL = 20;
         const int VK_SCROLL = 145;
 
-        public Form1()
+        public Form2()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form2_Load(object sender, EventArgs e)
         {
             radioUp.Checked = false;
             radioDown.Checked = false;
@@ -58,7 +58,7 @@ namespace CodeComparison
         //}
 
 
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        private void Form2_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyData)
             {
@@ -72,7 +72,7 @@ namespace CodeComparison
 
         }
 
-        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        private void Form2_KeyUp(object sender, KeyEventArgs e)
         {
             switch (e.KeyData)
             {
@@ -122,7 +122,7 @@ namespace CodeComparison
             {
                 Press_Num_Lock();
             }
-            
+
             Sleep(100);
             // 2, turn on CAPS LOCK,SCROLL LOCK, NUM LOCK
             Press_Caps_Lock();
@@ -136,7 +136,7 @@ namespace CodeComparison
             Press_Scroll_Lock();
             // 5, turn off all 3 keys
             Sleep(200);
-            
+
             Press_Caps_Lock();
             Press_Scroll_Lock();
             Press_Num_Lock();

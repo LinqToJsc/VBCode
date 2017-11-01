@@ -7,7 +7,6 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PC_CodeComparison
@@ -238,7 +237,7 @@ namespace PC_CodeComparison
                 }
             }
             return 1;
-           // return CallNextHookEx(hHook, nCode, wParam, lParam);
+            //return CallNextHookEx(hHook, nCode, wParam, lParam);
         }
 
         private void Btn_Clear_Click(object sender, EventArgs e)
