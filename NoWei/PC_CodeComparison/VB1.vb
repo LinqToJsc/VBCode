@@ -1,295 +1,295 @@
 ﻿VERSION 5.00
 Begin VB.Form frmMain
-   AutoRedraw = -1  'True
-   Caption         = "N33 对码检测软件 V1.0"
-   ClientHeight    = 5790
-   ClientLeft      = 60
-   ClientTop       = 450
-   ClientWidth     = 11550
-   KeyPreview      = -1  'True
-   LinkTopic       = "Form1"
-   ScaleHeight     = 386
-   ScaleMode       = 3  'Pixel
-   ScaleWidth      = 770
-   StartUpPosition = 1  '所有者中心
+   AutoRedraw      =   -1  'True
+   Caption         =   "N33 对码检测软件 V1.0"
+   ClientHeight    =   5790
+   ClientLeft      =   60
+   ClientTop       =   450
+   ClientWidth     =   11550
+   KeyPreview      =   -1  'True
+   LinkTopic       =   "Form1"
+   ScaleHeight     =   386
+   ScaleMode       =   3  'Pixel
+   ScaleWidth      =   770
+   StartUpPosition =   1  '所有者中心
    Begin VB.CommandButton cmdClear
-      Caption         = "清屏"
-      Height          = 372
-      Left            = 1536
-      TabIndex        = 16
-      Top             = 4506
-      Width           = 876
+      Caption         =   "清屏"
+      Height          =   372
+      Left            =   1536
+      TabIndex        =   16
+      Top             =   4506
+      Width           =   876
    End
    Begin VB.CommandButton cmdExit
-      Caption         = "结束"
-      Height          = 372
-      Left            = 1536
-      TabIndex        = 15
-      Top             = 5040
-      Width           = 876
+      Caption         =   "结束"
+      Height          =   372
+      Left            =   1536
+      TabIndex        =   15
+      Top             =   5040
+      Width           =   876
    End
    Begin VB.ListBox lstInput
-      BackColor       = &H80000006 &
-      ForeColor = &H80000005 &
-      Height = 4740
-      Left            = 5952
-      TabIndex        = 8
-      Top             = 432
-      Width           = 5172
+      BackColor       =   &H80000006&
+      ForeColor       =   &H80000005&
+      Height          =   4740
+      Left            =   5952
+      TabIndex        =   8
+      Top             =   432
+      Width           =   5172
    End
    Begin VB.CommandButton cmdFlush
-      Cancel          = -1  'True
-      Caption         = "清码"
-      Height          = 372
-      Left            = 384
-      TabIndex        = 1
-      Top             = 4506
-      Width           = 876
+      Cancel          =   -1  'True
+      Caption         =   "清码"
+      Height          =   372
+      Left            =   384
+      TabIndex        =   1
+      Top             =   4506
+      Width           =   876
    End
    Begin VB.CommandButton cmdMatchCode
-      Caption         = "对码"
-      Height          = 372
-      Left            = 384
-      TabIndex        = 0
-      Top             = 5034
-      Width           = 876
+      Caption         =   "对码"
+      Height          =   372
+      Left            =   384
+      TabIndex        =   0
+      Top             =   5034
+      Width           =   876
    End
    Begin VB.Label lblRxName
-      AutoSize        = -1  'True
-      Caption         = "接受器生产序列号"
+      AutoSize        =   -1  'True
+      Caption         =   "接受器生产序列号"
       BeginProperty Font
-         Name            = "宋体"
-         Size            = 10.5
-         Charset         = 134
-         Weight          = 700
-         Underline       = 0   'False
-         Italic          = 0   'False
-         Strikethrough   = 0   'False
+         Name            =   "宋体"
+         Size            =   10.5
+         Charset         =   134
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
       EndProperty
-      Height = 216
-      Left            = 3744
-      TabIndex        = 14
-      Top             = 4080
-      Width           = 1824
+      Height          =   216
+      Left            =   3744
+      TabIndex        =   14
+      Top             =   4080
+      Width           =   1824
    End
    Begin VB.Label lblRxID
-      Alignment       = 2  'Center
-      BackColor       = &H80000005 &
-      BorderStyle = 1  'Fixed Single
+      Alignment       =   2  'Center
+      BackColor       =   &H80000005&
+      BorderStyle     =   1  'Fixed Single
       BeginProperty Font
-         Name            = "宋体"
-         Size            = 10.5
-         Charset         = 134
-         Weight          = 400
-         Underline       = 0   'False
-         Italic          = 0   'False
-         Strikethrough   = 0   'False
+         Name            =   "宋体"
+         Size            =   10.5
+         Charset         =   134
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
       EndProperty
-      Height = 264
-      Left            = 384
-      TabIndex        = 13
-      Top             = 4032
-      Width           = 3072
+      Height          =   264
+      Left            =   384
+      TabIndex        =   13
+      Top             =   4032
+      Width           =   3072
    End
    Begin VB.Label lblTxName
-      AutoSize        = -1  'True
-      Caption         = "发射器生产序列号"
+      AutoSize        =   -1  'True
+      Caption         =   "发射器生产序列号"
       BeginProperty Font
-         Name            = "宋体"
-         Size            = 10.5
-         Charset         = 134
-         Weight          = 700
-         Underline       = 0   'False
-         Italic          = 0   'False
-         Strikethrough   = 0   'False
+         Name            =   "宋体"
+         Size            =   10.5
+         Charset         =   134
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
       EndProperty
-      Height = 216
-      Left            = 3744
-      TabIndex        = 12
-      Top             = 3528
-      Width           = 1824
+      Height          =   216
+      Left            =   3744
+      TabIndex        =   12
+      Top             =   3528
+      Width           =   1824
    End
    Begin VB.Label lblTxID
-      Alignment       = 2  'Center
-      BackColor       = &H80000005 &
-      BorderStyle = 1  'Fixed Single
+      Alignment       =   2  'Center
+      BackColor       =   &H80000005&
+      BorderStyle     =   1  'Fixed Single
       BeginProperty Font
-         Name            = "宋体"
-         Size            = 10.5
-         Charset         = 134
-         Weight          = 400
-         Underline       = 0   'False
-         Italic          = 0   'False
-         Strikethrough   = 0   'False
+         Name            =   "宋体"
+         Size            =   10.5
+         Charset         =   134
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
       EndProperty
-      Height = 264
-      Left            = 384
-      TabIndex        = 11
-      Top             = 3504
-      Width           = 3072
+      Height          =   264
+      Left            =   384
+      TabIndex        =   11
+      Top             =   3504
+      Width           =   3072
    End
    Begin VB.Label lblBVolt
-      AutoSize        = -1  'True
-      Caption         = "电池电压（V）"
+      AutoSize        =   -1  'True
+      Caption         =   "电池电压（V）"
       BeginProperty Font
-         Name            = "宋体"
-         Size            = 10.5
-         Charset         = 134
-         Weight          = 700
-         Underline       = 0   'False
-         Italic          = 0   'False
-         Strikethrough   = 0   'False
+         Name            =   "宋体"
+         Size            =   10.5
+         Charset         =   134
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
       EndProperty
-      Height = 216
-      Left            = 3744
-      TabIndex        = 10
-      Top             = 5112
-      Width           = 1488
+      Height          =   216
+      Left            =   3744
+      TabIndex        =   10
+      Top             =   5112
+      Width           =   1488
    End
    Begin VB.Label lblVolt
-      Alignment       = 2  'Center
-      BackColor       = &H80000005 &
-      BorderStyle = 1  'Fixed Single
+      Alignment       =   2  'Center
+      BackColor       =   &H80000005&
+      BorderStyle     =   1  'Fixed Single
       BeginProperty Font
-         Name            = "宋体"
-         Size            = 10.5
-         Charset         = 134
-         Weight          = 400
-         Underline       = 0   'False
-         Italic          = 0   'False
-         Strikethrough   = 0   'False
+         Name            =   "宋体"
+         Size            =   10.5
+         Charset         =   134
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
       EndProperty
-      Height = 264
-      Left            = 2688
-      TabIndex        = 9
-      Top             = 5088
-      Width           = 732
+      Height          =   264
+      Left            =   2688
+      TabIndex        =   9
+      Top             =   5088
+      Width           =   732
    End
    Begin VB.Label lblKeys
-      Alignment       = 2  'Center
-      BorderStyle     = 1  'Fixed Single
-      Caption         = "按键 6"
+      Alignment       =   2  'Center
+      BorderStyle     =   1  'Fixed Single
+      Caption         =   "按键 6"
       BeginProperty Font
-         Name            = "宋体"
-         Size            = 10.5
-         Charset         = 134
-         Weight          = 700
-         Underline       = 0   'False
-         Italic          = 0   'False
-         Strikethrough   = 0   'False
+         Name            =   "宋体"
+         Size            =   10.5
+         Charset         =   134
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
       EndProperty
-      Height = 264
-      Index           = 5
-      Left            = 4032
-      TabIndex        = 7
-      Top             = 1992
-      Width           = 1188
+      Height          =   264
+      Index           =   5
+      Left            =   4032
+      TabIndex        =   7
+      Top             =   1992
+      Width           =   1188
    End
    Begin VB.Label lblKeys
-      Alignment       = 2  'Center
-      BorderStyle     = 1  'Fixed Single
-      Caption         = "按键 5"
+      Alignment       =   2  'Center
+      BorderStyle     =   1  'Fixed Single
+      Caption         =   "按键 5"
       BeginProperty Font
-         Name            = "宋体"
-         Size            = 10.5
-         Charset         = 134
-         Weight          = 700
-         Underline       = 0   'False
-         Italic          = 0   'False
-         Strikethrough   = 0   'False
+         Name            =   "宋体"
+         Size            =   10.5
+         Charset         =   134
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
       EndProperty
-      Height = 264
-      Index           = 4
-      Left            = 4032
-      TabIndex        = 6
-      Top             = 1440
-      Width           = 1188
+      Height          =   264
+      Index           =   4
+      Left            =   4032
+      TabIndex        =   6
+      Top             =   1440
+      Width           =   1188
    End
    Begin VB.Label lblKeys
-      Alignment       = 2  'Center
-      BorderStyle     = 1  'Fixed Single
-      Caption         = "按键 4"
+      Alignment       =   2  'Center
+      BorderStyle     =   1  'Fixed Single
+      Caption         =   "按键 4"
       BeginProperty Font
-         Name            = "宋体"
-         Size            = 10.5
-         Charset         = 134
-         Weight          = 700
-         Underline       = 0   'False
-         Italic          = 0   'False
-         Strikethrough   = 0   'False
+         Name            =   "宋体"
+         Size            =   10.5
+         Charset         =   134
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
       EndProperty
-      Height = 264
-      Index           = 3
-      Left            = 1704
-      TabIndex        = 5
-      Top             = 2472
-      Width           = 1188
+      Height          =   264
+      Index           =   3
+      Left            =   1704
+      TabIndex        =   5
+      Top             =   2472
+      Width           =   1188
    End
    Begin VB.Label lblKeys
-      Alignment       = 2  'Center
-      BorderStyle     = 1  'Fixed Single
-      Caption         = "按键 3"
+      Alignment       =   2  'Center
+      BorderStyle     =   1  'Fixed Single
+      Caption         =   "按键 3"
       BeginProperty Font
-         Name            = "宋体"
-         Size            = 10.5
-         Charset         = 134
-         Weight          = 700
-         Underline       = 0   'False
-         Italic          = 0   'False
-         Strikethrough   = 0   'False
+         Name            =   "宋体"
+         Size            =   10.5
+         Charset         =   134
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
       EndProperty
-      Height = 264
-      Index           = 2
-      Left            = 1728
-      TabIndex        = 4
-      Top             = 1032
-      Width           = 1188
+      Height          =   264
+      Index           =   2
+      Left            =   1728
+      TabIndex        =   4
+      Top             =   1032
+      Width           =   1188
    End
    Begin VB.Label lblKeys
-      Alignment       = 2  'Center
-      BorderStyle     = 1  'Fixed Single
-      Caption         = "按键 2"
+      Alignment       =   2  'Center
+      BorderStyle     =   1  'Fixed Single
+      Caption         =   "按键 2"
       BeginProperty Font
-         Name            = "宋体"
-         Size            = 10.5
-         Charset         = 134
-         Weight          = 700
-         Underline       = 0   'False
-         Italic          = 0   'False
-         Strikethrough   = 0   'False
+         Name            =   "宋体"
+         Size            =   10.5
+         Charset         =   134
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
       EndProperty
-      Height = 264
-      Index           = 1
-      Left            = 2568
-      TabIndex        = 3
-      Top             = 1752
-      Width           = 1188
+      Height          =   264
+      Index           =   1
+      Left            =   2568
+      TabIndex        =   3
+      Top             =   1752
+      Width           =   1188
    End
    Begin VB.Label lblKeys
-      Alignment       = 2  'Center
-      BorderStyle     = 1  'Fixed Single
-      Caption         = "按键 1"
+      Alignment       =   2  'Center
+      BorderStyle     =   1  'Fixed Single
+      Caption         =   "按键 1"
       BeginProperty Font
-         Name            = "宋体"
-         Size            = 10.5
-         Charset         = 134
-         Weight          = 700
-         Underline       = 0   'False
-         Italic          = 0   'False
-         Strikethrough   = 0   'False
+         Name            =   "宋体"
+         Size            =   10.5
+         Charset         =   134
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
       EndProperty
-      Height = 264
-      Index           = 0
-      Left            = 768
-      TabIndex        = 2
-      Top             = 1824
-      Width           = 1188
+      Height          =   264
+      Index           =   0
+      Left            =   768
+      TabIndex        =   2
+      Top             =   1824
+      Width           =   1188
    End
    Begin VB.Shape Shape1
-      Height          = 2772
-      Left            = 384
-      Top             = 432
-      Width           = 5172
+      Height          =   2772
+      Left            =   384
+      Top             =   432
+      Width           =   5172
    End
 End
 Attribute VB_Name = "frmMain"

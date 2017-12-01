@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
@@ -48,6 +47,10 @@ namespace PC_CodeComparison
         public bool Shift_Press_Flag = false;
         public bool Alt_Press_Flag = false;
         public bool Mask_Input_Display = false;
+
+        private bool Scroll_Lock_On_Flag;
+        private bool Caps_Lock_On_Flag;
+        private bool Num_Lock_On_Flag;
 
         /// <summary>
         /// 改变键状态
@@ -256,8 +259,14 @@ namespace PC_CodeComparison
 
         private void Btn_Code_Click(object sender, EventArgs e)
         {
+            //var t1 = DateTime.Now;
             Set_Match_Code();
             cmdClear_Click();
+            //var t2 = DateTime.Now;
+
+            //var t3 = t2 - t1;
+            //OptListBox.Items.Add("一次对码执行完成用时 > " + t3.Seconds + "." + t3.Milliseconds);
+
         }
 
         private void Btn_Exit_Click(object sender, EventArgs e)
@@ -289,21 +298,31 @@ namespace PC_CodeComparison
             //卸钩子
             Hook_Clear();
             if (GetKeyState(145) == 1)
-            {
-                Press_Scroll_Lock();
-            }
+                Scroll_Lock_On_Flag = true;
+            else
+                Scroll_Lock_On_Flag = false;
 
             if (GetKeyState(20) == 1)
-            {
-                Press_Caps_Lock();
-            }
+                Caps_Lock_On_Flag = true;
+            else
+                Caps_Lock_On_Flag = false;
 
             if (GetKeyState(144) == 1)
-            {
-                Press_Num_Lock();
-            }
+                Num_Lock_On_Flag = true;
+            else
+                Num_Lock_On_Flag = false;
 
-            Sleep(50);
+            // 1, turn off all 3 keys, status = 0
+            if (Scroll_Lock_On_Flag)
+                Press_Scroll_Lock();
+
+            if (Caps_Lock_On_Flag)
+                Press_Caps_Lock();
+
+            if (Num_Lock_On_Flag)
+                Press_Num_Lock();
+
+            Sleep(NorvayConfig.CodeSleep);
 
             // 2, turn on CAPS LOCK,SCROLL LOCK, NUM LOCK, status = 7
             Press_Caps_Lock();
@@ -319,7 +338,7 @@ namespace PC_CodeComparison
             Press_Scroll_Lock();
 
             // 5, turn off all 3 keys, status = 0
-            Sleep(50);
+            Sleep(NorvayConfig.CodeSleep);
 
             Press_Caps_Lock();
             Press_Scroll_Lock();
@@ -335,31 +354,48 @@ namespace PC_CodeComparison
             //卸钩子
             Hook_Clear();
             if (GetKeyState(145) == 1)
-                Press_Scroll_Lock();
+                Scroll_Lock_On_Flag = true;
+            else
+                Scroll_Lock_On_Flag = false;
 
             if (GetKeyState(20) == 1)
-                Press_Caps_Lock();
+                Caps_Lock_On_Flag = true;
+            else
+                Caps_Lock_On_Flag = false;
 
             if (GetKeyState(144) == 1)
+                Num_Lock_On_Flag = true;
+            else
+                Num_Lock_On_Flag = false;
+
+
+            // 1, turn off all 3 keys, status = 0
+            if (Scroll_Lock_On_Flag)
+                Press_Scroll_Lock();
+
+            if (Caps_Lock_On_Flag)
+                Press_Caps_Lock();
+
+            if (Num_Lock_On_Flag)
                 Press_Num_Lock();
 
-            Sleep(10);
+            Sleep(NorvayConfig.ClearCodeSleep);
 
             // 2, turn on SCROLL LOCK, NUM LOCK
             Press_Scroll_Lock();
             Press_Num_Lock();
 
-            Sleep(10); //                            ' delay for 10 mS
+            Sleep(NorvayConfig.ClearCodeSleep); //                            ' delay for 10 mS
 
             // 3, turn off SCROLL LOCK
             Press_Scroll_Lock();
 
-            Sleep(10); //                            ' delay for 10 mS
+            Sleep(NorvayConfig.ClearCodeSleep); //                            ' delay for 10 mS
 
             //' 4, turn on SCROLL LOCK
             Press_Scroll_Lock();
 
-            Sleep(10); //                          ' delay for 10 mS
+            Sleep(NorvayConfig.ClearCodeSleep); //                          ' delay for 10 mS
 
             // 5, turn off all keys
             Press_Scroll_Lock();
@@ -372,25 +408,25 @@ namespace PC_CodeComparison
         private void Press_Caps_Lock()
         {
             keybd_event(20, 0, 0, (UIntPtr)0); //  DOWN
-            Sleep(100); // delay for 100 mS
-            keybd_event(20, 0, 2, (UIntPtr)0); // UP
             Sleep(10); // delay for 10 mS
+            keybd_event(20, 0, 2, (UIntPtr)0); // UP
+            Sleep(NorvayConfig.SampSleep); // delay for 30 mS
         }
 
         private void Press_Scroll_Lock()
         {
             keybd_event(145, 0, 0, (UIntPtr)0); // DOWN
-            Sleep(100); // delay for 100 mS
-            keybd_event(145, 0, 2, (UIntPtr)0);// UP
             Sleep(10); // delay for 10 mS
+            keybd_event(145, 0, 2, (UIntPtr)0);// UP
+            Sleep(NorvayConfig.SampSleep); // delay for 50 mS
         }
 
         private void Press_Num_Lock()
         {
             keybd_event(144, 0, 0, (UIntPtr)0); // DOWN
-            Sleep(100); // delay for 100 mS
-            keybd_event(144, 0, 2, (UIntPtr)0);// UP
             Sleep(10); // delay for 10 mS
+            keybd_event(144, 0, 2, (UIntPtr)0);// UP
+            Sleep(NorvayConfig.SampSleep); // delay for 50 mS
         }
 
 
